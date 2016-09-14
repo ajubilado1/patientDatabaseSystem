@@ -1,0 +1,75 @@
+﻿<style>
+#body{
+	 background-image:;
+		background-position: bottom; 
+		background-repeat: repeat-x;
+        padding: 0 20px;
+	
+}	
+#wrapper1{
+	width: 80%;
+	float:center;
+	margin-left: auto ;
+	margin-right: auto;
+	
+	box-shadow: 5px 5px 5px #1e1e1e;
+}
+#header {
+	float: inherit;
+	background-color: ;
+	border-bottom: 2px solid #000000;
+	font-size: 4em;
+	padding: 10px;
+	text-align: center;
+	height: 200px;
+	background-image: url('images/images1.jpg');
+	background-position: bottom;
+	background-repeat: repeat-x;
+	padding: 0 20px;
+	-webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+
+}
+#content{
+	float: center;
+	width:90%;
+}
+#nav{
+	float:left;
+	width: 15%;
+	display:  block ;
+}
+#nav ul { list-style-type: none; 
+			     padding: 10px;
+}
+
+#nav a {text-decoration: none; 
+			   padding: 10px;
+			   font-weight: bold;
+}
+#nav a:link { color: #000000;
+}
+#nav a:visited { color: #000000;
+}
+#nav a:hover { color: #000066;
+}
+#sidebar{
+	float: right;
+	width: 25%;
+	background-color:#ffffff;
+	Padding: 10px;
+}
+#footer{
+	background-color: #ffffff;
+	background: url('../images/pianobanner.jpg');
+	color: #000000;
+	font-size: .60em;
+	font-family: italics;
+	text-align: center;
+	padding: 40px;
+}
+#center{
+	width:30%;
+}
+</style>

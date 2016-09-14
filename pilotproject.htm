@@ -1,0 +1,1035 @@
+<!--Name: Artemio P Jubilado jr-->
+<!--Date: 4/22/2016-->
+<!--website concept: Designed for the medical profession, Patient Database System is a mobile application where any health care worker is able to access
+patient information per valid credentials i.e. username and password-->  
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Patient Database</title>
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" > 
+		
+		<!--meta content-->
+		<meta name="Patient Database System" content="inventory patient database system">
+		<meta name="keywords" content="Diagnosis, known drug allergies, medications, name,date of birth">
+		<meta charset="utf-8">
+		
+		<!--external css-->
+		<link href="css/mini4.css" rel="stylesheet" type="text/css"/>
+		
+		<!--JS from felkeStudentDataFiles implemented in blog section-->
+	
+		
+</head>
+	<body>
+	
+		<!--1st page:index-->
+		<div data-role="page" id="home">
+		
+		<!--Header bar-->
+		<header data-role="header">
+			<h1>Patient database systems</h1>
+			<!--adds button to header-->
+			<a href="#home" data-inline="true">Home</a>
+			
+		</header>
+	
+		<article data-role="content">
+		
+					<!--submit form to a database-->
+					<form method="post"
+					action="http://webdevfoundations.net/scripts/formdemo.asp"
+					onsubmit="return validateForm();">
+		
+					
+					<div id="header">
+							<img alt="images/image1.jpg" class="banner" height="180" src="images/image1.jpg" width="512"/>			
+					</div>
+					<br>
+					<br>
+					
+			
+					
+					<h3>Patient Database</h3>
+							<!--implement form textbox..username..password..-->
+							<p>User Name:
+							<input type="text" name="username" id="username" size="15" maxlength="30"</p style="width: 181px"></p>
+							<p>Password: 
+							<input type="password" name="password" id="password" size="15" maxlength="30"</p style="width: 193px"></p><br>
+							<textarea name="comments" style="width: 200px; height: 233px"></textarea>
+							<!--submit...clear exit-->
+							<p><a href="#patientdatabase" data-direction="reverse" data-role="button" data-theme="b">Submit</a></p>	
+							<input type="reset" value="Clear">
+							
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+					
+							
+					
+					
+					<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+					
+		</article>
+	
+		<!--Footer bar-->
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<!--<li><a href= "#patientdatabase"data-icon="photo" data-transition="slide" data-theme="a">Patient DataBase</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>-->
+					
+				</ul>
+			</nav>
+		</footer>
+	</div><!--1st page break-->
+	
+	
+	<!--2nd page:photo page-->
+	<div data-role="page" id="patientdatabase">
+	
+		<!--Header bar-->
+		<header data-role="header">
+			<h1>Patient Database</h1>
+			<!--adds button to header-->
+			<a href="#home">Home</a>
+			
+		</header>
+					<div id="header">
+							<img alt="images/image1" class="banner" height="180" src="images/image1.jpg" width="912"/>
+					</div>
+	
+		<article data-role="content">
+		<!--adds listview and filter properties...alt tags-->
+				<ul data-role="listview"   data-filter="true">
+					<li>
+						<a href="#patient1"  data-transition="flip">
+						<h1>Patient1</h1>
+						<img src="images/patient1.jpg" height="200" width="200" alt="patient1"/> 
+						
+						</a>
+					
+					</li>
+					<li>
+						<a href="#patient2" data-transition="flip">
+						<h1>Patient2</h1>
+						<img src="images/patient2.jpg"  height="200" width="200" alt="patient2"/>
+						</a>
+					</li>
+					<li> 
+						<a href="patient3" data-transition="flip">
+						<h1>Patient3</h1>
+						<img src="images/patient3.jpg" height="200" width="200" alt="patient3"/>
+						</a>
+					</li>
+					<li>
+						<a href="#patient4" data-transition="flip">
+						<h1>Patient4</h1>
+						<img src="images/patient4.jpg" alt="Patient4"/>
+						</a>
+					</li>
+					<li> 
+						<a href="#patient5" data-transition="flip">
+						<h1>Patient5</h1>
+						<img src="images/patient5.jpg"  height="200" width="200" alt="patient5"/>
+						</a>
+					</li>
+					<li>
+						<a href="#patient6" data-transition="flip">
+						<h1>Patient6</h1>
+						<img src="images/patient6.jpg" height="200" width="200" alt="patient6"/>
+						</a>
+					</li>
+					<br>
+					
+					
+					<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+		</article>
+	
+	
+		<!--Footer bar-->
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+					<li><a href= "#patientdatabase"data-icon="photo" data-transition="slide" data-theme="a">Patient DataBase</a></li>
+					<!--<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>-->
+					
+					
+					</ul>
+				</nav>
+			</footer>
+		</div><!--2nd page break-->
+	
+	
+	
+				<!--2a page:photo page: transition flip to enlarged photo-->
+				<div data-role="page"  id="patient1" >
+	
+				<!--Header bar-->
+				<header data-role="header">
+				<h1>Patient Database</h1>
+				<!--adds button to header-->
+				<a href="#photo">Photo</a>
+				</header>
+				<h1>Patient1</h1>
+				<img src="images/patient1.jpg"  height="500" width="500" alt="patient1" 
+				/> <br>
+				<br>
+				<p>Name: Patient1</p>
+				<p>Date of Birth: xx/xx/xxxx</p>
+				<p>Known Drug Allergies: xxxxxx</p>
+				<p>History:
+				<br>
+				<br>
+				<br>
+				</p>
+				<p>Medications:
+				<br>
+				<br>
+				<br>
+				</p>
+				<!--Footer bar-->
+				<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<!--Page Transitions...Themed buttons..navigation button-->
+						<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+						<li><a href= "#patientdatabase"data-icon="photo" data-transition="slide" data-theme="a">Patient DataBase</a></li>
+						<!--<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+						<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+						<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+						<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>	-->			
+					</ul>
+				</nav>
+				</footer>
+		
+				</div><!-- 2a page end page-->
+	
+	
+				<!--2b page:photo page: transition flip to enlarged photo-->
+				<div data-role="page"  id="patient2">
+	
+				<!--Header bar-->
+				<header data-role="header">
+				<h1>Patient 2</h1>
+				<!--adds button to header-->
+				<a href="#photo">Photo</a>
+			
+				</header>
+				<h1>Patient2</h1>
+				<img src="images/patient2.jpg" height="500" width="500" alt="patient2"/> <br>
+				<br>
+				<p>Name: Patient2</p>
+				<p>Date of Birth: xx/xx/xxxx</p>
+				<p>Known Drug Allergies: xxxxxx</p>
+				<p>History:
+				<br>
+				<br>
+				<br>
+				</p>
+				<p>Medications:
+				<br>
+				<br>
+				<br>
+				</p>
+			
+				
+			
+	
+				<!--Footer bar-->
+				<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+					<li><a href= "#patientdatabase"data-icon="photo" data-transition="slide" data-theme="a">Patient DataBase</a></li>
+					<!--<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>-->
+					
+					
+				</ul>
+				</nav>
+				</footer>		
+		
+				</div><!--end page-->
+	
+				<!--2c page:photo page: transition flip to enlarged photo-->
+				<div data-role="page"  id="patient3">
+	
+				<!--Header bar-->
+				<header data-role="header">
+				<h1>Patient 3</h1>
+				<!--adds button to header-->
+				<a href="#photo">Photo</a>
+			
+				</header>
+					
+	
+				<h1>Patient 3</h1>
+				<img src="images/patient3.jpg" height="500" width="500" alt="patient 3"/> <br>
+				<br>
+			
+				<p>Name: Patient3</p>
+				<p>Date of Birth: xx/xx/xxxx</p>
+				<p>Known Drug Allergies: xxxxxx</p>
+				<p>History:
+				<br>
+				<br>
+				<br>
+				
+				
+				</p>
+				<p>Medications:
+				<br>
+				<br>
+				<br>
+				</p>
+			
+				<audio controls>
+				<source src="playlist/luigi.m4a" audio="autoplay" type="audio/mpeg">
+				</audio>
+			
+			
+			
+			
+		
+		
+	
+	
+				<!--Footer bar-->
+				<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+					<li><a href= "#patientdatabase"data-icon="photo" data-transition="slide" data-theme="a">Patient DataBase</a></li>
+					<!--<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>-->
+					
+					
+				</ul>
+				</nav>
+				</footer>	
+		
+				</div><!--2c page end page-->
+	
+	
+				<!--2d page:photo page: transition flip to enlarged photo-->
+				<div data-role="page"  id="patient4">
+	
+				<!--Header bar-->
+				<header data-role="header">
+				<h1>Patient 4</h1>
+				<!--adds button to header-->
+				<a href="#photo">Photo</a>
+			
+				</header>
+					
+	
+		
+				<h1>Patient 4</h1>
+				<img src="images/patient4.jpg" height="500" width="500" alt="patient4"/> <br>
+				<br>
+				<p>Name: Patient1</p>
+				<p>Date of Birth: xx/xx/xxxx</p>
+				<p>Known Drug Allergies: xxxxxx</p>
+				<p>History:
+				<br>
+				<br>
+				<br>
+				
+				
+				</p>
+				<p>Medications:
+				<br>
+				<br>
+				<br>
+				</p>
+				
+				
+				
+			
+				<audio controls>
+				<source src="playlist/mozart.m4a" audio="autoplay" type="audio/mpeg">
+				</audio>
+			
+			
+			
+		
+		
+	
+	
+				<!--Footer bar-->
+				<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+					
+				</ul>
+				</nav>
+				</footer>	
+		
+				</div><!--2d page end page-->
+	
+	
+				<!--2c page:photo page: transition flip to enlarged photo-->
+				<div data-role="page"  id="patient5">
+	
+				<!--Header bar-->
+				<header data-role="header">
+				<h1>Patient 5</h1>
+				<!--adds button to header-->
+				<a href="#photo">Photo</a>
+			
+				</header>
+					
+	
+				<h1>Patient 5</h1>
+					<img src="images/patient5.jpg" height="500" width="500" alt="patient5"/> <br>
+				<br>
+				<p>Name: Patient5</p>
+				<p>Date of Birth: xx/xx/xxxx</p>
+				<p>Known Drug Allergies: xxxxxx</p>
+				<p>History:
+				<br>
+				<br>
+				<br>
+				
+				
+				</p>
+				<p>Medications:
+				<br>
+				<br>
+				<br>
+				</p>
+				<!--Footer bar-->
+				<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<!--Page Transitions...Themed buttons..navigation button-->
+						<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+						<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+						<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+						<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+						<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+					
+					</ul>
+				</nav>
+				</footer>
+		
+				</div><!--2c page end page-->
+	
+				<!--2d page:photo page: transition flip to enlarged photo-->
+				<div data-role="page"  id="patient6">
+	
+				<!--Header bar-->
+				<header data-role="header">
+					<h1>Patient 6</h1>
+					<!--adds button to header-->
+					<a href="#photo">Photo</a>
+			
+				</header>
+					
+	
+				<h1>Patient 6</h1>
+					<img src="images/patient6.jpg"  height="500" width="500" alt="patient6"/> <br>
+				<br>	
+				<!--Footer bar-->
+				<footer data-role="footer" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="flip" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+					
+					</ul>
+				</nav>
+				</footer>	
+		
+		</div><!--end page-->
+
+	
+			
+					
+	<!--page 3:info page-->
+	<div data-role="page" id="info">
+	
+		<!--Header bar-->
+		<header data-role="header">
+			<h1>Classics</h1>
+			<!--adds button to header-->
+			<a href="#photo">Photo</a>
+			
+		</header>
+		
+					<div id="header">
+							<img alt="bannerwh" class="banner" height="180" src="images/bannerwh.png" width="512"/>
+					</div>
+		
+		<article data-role="content">
+			
+			<!--adds listview and filter properties...collapsible content-->
+		<ul data-role="collapsible" data-filter="true">
+		<h3>Mozart</h3>
+		
+		
+		<img alt="mozart" height="160" src="images/mozart.jpg" width="160" id="img1" onmouseout="FP_swapImgRestore()" onmouseover="FP_swapImg(1,1,/*id*/'img1',/*url*/'images/mozart2.jpg')" style="margin: 10px; float: left" class="auto-style1" />;Wolfgang Amadeus Mozart (German: [ˈvɔlfɡaŋ amaˈdeus ˈmoːtsaʁt], English see fn.;[1] 27 January 1756 – 5 December 1791), baptised as Johannes Chrysostomus Wolfgangus Theophilus Mozart,[2] was a prolific and influential composer of the Classical era
+		&nbsp;Mozart showed prodigious ability from his earliest childhood. Already competent on keyboard and violin, he composed from the age of five and performed before European royalty. At 17, he was engaged as a court musician in Salzburg, but grew restless and travelled in search of a better position, always composing abundantly. While visiting Vienna in 1781, he was dismissed from his Salzburg position. He chose to stay in the capital, where he achieved fame but little financial security. During his final years in Vienna, he composed many of his best-known symphonies, concertos, and operas, and portions of the Requiem, which was largely unfinished at the time of his death. The circumstances of his early death have been much mythologized. He was survived by his wife Constanze and two sons.
+		Mozart learned voraciously from others, and developed a brilliance and maturity of style that encompassed the light and graceful along with the dark and passionate. He composed over 600 works, many acknowledged as pinnacles of symphonic, concertante, chamber, operatic, and choral music. He is among the most enduringly popular of classical composers, and his influence on subsequent Western art music is profound; Beethoven composed his own early works in the shadow of Mozart, and Joseph Haydn wrote that "posterity will not see such a talent again in 100 years."[3]</p>
+		</ul>
+	
+	
+		<ul data-role="collapsible">
+			<h3>Johann Sebastian Bach</h3>
+			<p>
+			<img src="images/bach.jpg"  height="200" width="200" alt="Bach" style="margin: 10px; float: left"/>Johann Sebastian Bach[1] (31 March [O.S. 21 March] 1685 – 28 July 1750) was a German composer and musician of the Baroque period. He enriched established German styles through his skill in counterpoint, harmonic and motivic organisation, and the adaptation of rhythms, forms, and textures from abroad, particularly from Italy and France. Bach's compositions include the Brandenburg concertos, the Mass in B minor, The Well-Tempered Clavier, two Passions, keyboard works, and more than 300 cantatas, of which nearly 100 cantatas have been lost to posterity.[2] His music is revered for its intellectual depth, technical command, and artistic beauty.</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+	
+		</ul>
+		<ul data-role="collapsible">
+			<h3>Igor Stravinsky</h3>
+			<p>
+			<img src="images/stravinsky.jpg" height="200" width="200" style="margin: 10px;  float: left";alt="Stravinsky"/>
+			Stravinsky's compositional career was notable for its stylistic diversity. He first achieved international fame with three ballets commissioned by the impresario Sergei Diaghilev and first performed in Paris by Diaghilev's Ballets Russes: The Firebird (1910), Petrushka (1911) and The Rite of Spring (1913). The last of these transformed the way in which subsequent composers thought about rhythmic structure and was largely responsible for Stravinsky's enduring reputation as a musical revolutionary who pushed the boundaries of musical design. His "Russian phase" was followed in the 1920s by a period in which he turned to neoclassical music. The works from this period tended to make use of traditional musical forms (concerto grosso, fugue and symphony). They often paid tribute to the music of earlier masters, such as J.S. Bach and Tchaikovsky. In the 1950s, Stravinsky adopted serial procedures. His compositions of this period shared traits with examples of his earlier output: rhythmic energy, the construction of extended melodic ideas out of a few two- or three-note cells and clarity of form, of instrumentation and of utterance.</p>
+			<br>
+			<br>
+			<br>
+			<br>
+	
+		</ul>
+		<ul data-role="collapsible">
+			<h3>Joeseph Hayden</h3>
+			<p>
+			<img src="images/josephhayden.jpg"  height="200" width="200" style="margin: 10px; float: left" alt="Hayden"/>Franz Joseph Haydn[n 1] (/ˈdʒoʊzəf ˈhaɪdən/; German: [ˈjoːzɛf ˈhaɪdən] ( listen); 31 March[1] 1732 – 31 May 1809), known as Joseph Haydn,[n 1] was one of the most prominent and prolific composers of the Classical period. He was instrumental in the development of chamber music such as the piano trio[2] and his contributions to musical form have earned him the epithets "Father of the Symphony" and "Father of the String Quartet".[3]
+
+			A lifelong resident of Austria,[4] Haydn spent much of his career as a court musician for the wealthy Esterházy family at their remote estate. This isolated him from other composers and trends in music until the later part of his life, when he was, as he put it, "forced to become original".[5] At the time of his death, aged 77, he was one of the most celebrated composers in Europe.</p>
+			<br>
+			<br>
+			<br>
+			<br>
+	
+		</ul>
+	
+				<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+	
+				<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+
+		</article>
+		
+		<!--Footer bar-->
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>	
+				</ul>
+			</nav>
+		</footer>
+		
+/		
+		
+	</div><!--page break-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--4th page:1st blog page-->
+	<div data-role="page" id="blog1">
+	
+		<!--header bar-->
+		<header data-role="header">
+			<h1>Classics</h1>
+			<!--adds button to header-->
+			<a href="#home">Home</a>
+			<a href="#blog1">Percussion Instruments</a>
+			<a href="#blog2">What instrument do you play?</a>
+			<a href="#blog3">Whats new in the industry?</a>
+			
+		</header>
+		
+			<div id="header">
+							<img alt="bannerwh" class="banner" height="180" src="images/bannerwh.png" width="512"/>
+			</div>
+		<article data-role="content">
+		
+			<form method="post"
+      action="http://webdevfoundations.net/scripts/formdemo.asp"
+      onsubmit="return validateForm();">
+		<!--adds listview and filter properties-->
+			<!--	<ul data-role="listview" data-filter="true">
+					<li>-->
+	<h3>Community Blog: Percussion Instruments</h3>
+	
+			<p>User Name:
+				<input type="text" name="username" id="username" size="15" maxlength="30"</p style="width: 181px"></p>
+			<p>Password: 
+				<input type="password" name="password" id="password" size="15" maxlength="30"</p style="width: 193px"></p><br>
+				<textarea name="comments" style="width: 200px; height: 233px"></textarea>
+			<br>
+			<br>
+			
+			<input name="Submit1" type="submit" value="submit" />
+			&nbsp;
+			
+			<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+					<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+
+					
+		</article>
+		<!--footer bar-->
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+				</ul>
+			</nav>
+		</footer>
+	</div><!-- page break-->
+	
+	<!--5th page:2nd blog page-->
+	<div data-role="page" id="blog2">
+		<!--Header bar-->
+		<header data-role="header">
+			<h1>Classics</h1>
+			<!--adds button to header-->
+			<a href="#home">Home</a>
+			<a href="#blog1">Percussion Instruments</a>
+			<a href="#blog2">What instrument do you play?</a>
+			<a href="#blog3">Whats new in the industry?</a>
+			
+		</header>
+	
+		<article data-role="content">
+		
+	<form method="post"
+      action="http://webdevfoundations.net/scripts/formdemo.asp"
+      onsubmit="return validateForm();">
+		<!--adds listview and filter properties-->
+			<!--	<ul data-role="listview" data-filter="true">
+					<li>-->
+			<h3>Community Blog: What Instrument do you play?</h3>
+			<p>User Name:
+			<input type="text" name="uername" id="username"	size="15" maxlength="30"</p style="width: 181px"></p>
+			<p>Password: 
+			<input type="password" name="password" id="password" size="15" maxlength="30"</p style="width: 193px"></p><br>
+			<textarea name="comments" style="width: 200px; height: 233px"></textarea>
+			<br>
+			<br>
+			<input name="Submit1" type="submit" value="submit" />
+			&nbsp;
+					<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+					
+					
+					<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+						
+		</article>
+	
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+				</ul>
+			</nav>
+		</footer>
+	</div><!--page break-->
+	
+	
+	<!--6th page:3rd blog page-->
+	<div data-role="page" id="blog3">
+		<!--header bar-->
+		<header data-role="header">
+			<h1>Classics</h1>
+			<!--adds button to header-->
+			<a href="#home">Home</a>
+			<a href="#blog1">Percussion Instruments</a>
+			<a href="#blog2">What instrument do you play?</a>
+			<a href="#blog3">Whats new in the industry?</a>
+			
+		</header>
+		
+					<div id="header">
+							<img alt="bannerwh" class="banner" height="180" src="images/bannerwh.png" width="512"/>
+					</div>
+	
+		<article data-role="content">
+		<!--adds listview and filter properties-->
+			<!--	<ul data-role="listview" data-filter="true">
+					<li>-->
+			<form method="post"
+				action="http://webdevfoundations.net/scripts/formdemo.asp"
+				onsubmit="return validateForm();">
+		<!--adds listview and filter properties-->
+			<!--	<ul data-role="listview" data-filter="true">
+					<li>-->
+	<h3>Community Blog: Whats New in the Industry?</h3>
+	<p>User Name:
+	<input type="text" name="uername" id="username" size="15" maxlength="30"</p style="width: 181px"></p>
+	<p>Password: 
+	<input type="password" name="password" id="password" size="15" maxlength="30"</p style="width: 193px"></p><br>
+	<textarea name="comments" style="width: 200px; height: 233px"></textarea>
+	<br>
+	<br>
+		<input name="Submit1" type="submit" value="submit" />
+			&nbsp;
+					<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+			
+			
+			<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+
+					
+	</article>
+		<!--footer bar-->
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+				</ul>
+			</nav>
+		</footer>
+	</div><!--page break-->
+	
+	<!--6th page:3rd blog page-->
+	<div data-role="page" id="contact">
+		<header data-role="header">
+		<!--header bar-->
+			<h1>Classics</h1>
+			<!--adds button to header-->
+			<a href="#home">Home</a>
+			<a href="#blog1">Percussion Instruments</a>
+			<a href="#blog2">What instrument do you play?</a>
+			<a href="#blog3">Whats new in the industry?</a>
+			
+		</header>
+		
+					<div id="header">
+							<img alt="bannerwh" class="banner" height="180" src="images/bannerwh.png" width="512"/>
+					</div>
+	
+	<article data-role="content">
+		
+	<form method="post"
+      action="http://webdevfoundations.net/scripts/formdemo.asp"
+      onsubmit="return validateForm();">
+		
+	<h3>Community Blog: whats new in the industry</h3>
+	<p>User Name:
+	<input type="text" name="uername" id="username" size="15" maxlength="30"</p style="width: 181px"></p>
+	<p>Password: 
+	<input type="password" name="password" id="password" size="15" maxlength="30"</p style="width: 193px"></p><br>
+	<textarea name="comments" style="width: 200px; height: 233px"></textarea>
+	<br>
+	<br>
+		<input name="Submit1" type="submit" value="submit" />
+		&nbsp;
+					
+						<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+				<div id="footer">
+					<p>Copyright © 2014Artemio P Jubilado Jr.<br>
+					last modified:04/23/2014 21:03:13</p>
+					</div>
+										
+		</article>
+		<!--footer bar-->
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+				</ul>
+			</nav>
+		</footer>
+	</div><!--page break-->
+	
+	
+	<!--7th page:contact page-->
+	<div data-role="page" id="contact" data-theme="a">
+		<header data-role="header">
+			<h1>Classics</h1>
+			<!--adds button to header-->
+			<a href="#home">Home</a>
+				
+			
+		</header>
+		
+			<div id="header">
+							<img alt="bannerwh" class="banner" height="180" src="images/bannerwh.png" width="512"/>
+			</div>
+	<article>
+	
+	 
+	  <br>
+	  <br>
+	  <br>
+	<fieldset>
+	<legend>Contanct information</legend>
+	<fieldset>
+	<label for="email" name="email" id="email">Email:</label>
+	<input type="text"  id="email"><br>
+	</fieldset>
+	<fieldset>
+	<!--name-->
+	<label for="email">Name:</label>
+	<input type="text" label for="name" name="Name" id="username"></label><br>
+	</fieldset>
+	
+	<!--radiobutton-->	
+	<fieldset data-role="controlgroup">
+		
+		<legend>Choose a Classical Artist</legend>
+			<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+			<label for="radio-choice-1">Mr. Beethoven</label>
+
+			<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+			<label for="radio-choice-2">Mr. Hayden</label>
+
+			<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
+			<label for="radio-choice-3">Mr. Luigi</label>
+
+			<input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4"  />
+			<label for="radio-choice-4">Mr. Mozart</label>
+	</fieldset>
+
+	<br>
+
+	<fieldset>
+	<!--telephone label-->
+	<label>Telephone:<br>
+	<input type="text" label for="telephone" name="Telephone" id="telephone"></label><br>
+	</fieldset>
+	<fieldset>
+	<!--additional comments label-->
+	<p>Additional Comments...</p>
+	<textarea name="comments" cols="20" rows="4"></textarea><br>
+	</fieldset>
+	<fieldset>
+	<!--subscribe to emails checkbox-->
+	<label input type="checkbox" name="subscribe" checked="checked"/><br>
+	
+	</label>
+	</fieldset>
+	<fieldset>
+	<br>
+	<!--submit button-->
+	<input type="submit" value="Submit"><br>
+		<input type="reset" value="Clear"><br>
+	</fieldset>
+	</form>
+	
+			<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+	</article>
+			<div id="footer">
+					<p>Copyright © 2016 Artemio P Jubilado Jr.<br>
+					last modified:09/14/2016 21:03:13</p>
+			</div>
+			
+			
+	<!--footerbar-->
+	<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<!--Page Transitions...Themed buttons..navigation button-->
+					<li><a href= "#home" data-icon="home" data-transition="slide" data-theme="a">Home</a></li>
+					<li><a href= "#photo"data-icon="photo" data-transition="slide" data-theme="a">Photos</a></li>
+					<li><a href= "#info" data-icon="info" data-transition="slide" data-theme="a">Info</a></li>
+					<li><a href= "#blog1" data-icon="info" data-transition="slide" data-theme="a">Weekly Blogs</a></li>
+					<li><a href= "#contact" data-icon="info" data-transition="slide" data-theme="a">Contact Information</a></li>
+					
+				</ul>
+			</nav>
+	</footer>
+	
+</body>
+</html>
